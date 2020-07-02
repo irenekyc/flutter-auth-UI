@@ -11,10 +11,10 @@ class AlreadyHaveAccountCheck extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-      Text(login ? "Don't have an account?" : "Already have an Account",
+      Text(login ? "Don't have an account? " : "Already have an Account? ",
           style: TextStyle(color: primaryColor)),
       GestureDetector(
-          onTap: () {},
+          onTap: press,
           child: Text(login ? "Sign Up" : "Login",
               style:
                   TextStyle(color: primaryColor, fontWeight: FontWeight.bold)))
