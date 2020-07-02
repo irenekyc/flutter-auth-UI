@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/constants.dart';
 
 import 'package:flutter_svg/svg.dart';
+
+import '../../Login/login_screen.dart';
 import './background.dart';
-import './rounded_button.dart';
+import '../../../components/rounded_button.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -22,7 +24,11 @@ class Body extends StatelessWidget {
             title: "LOGIN",
             btncolor: primaryColor,
             textColor: Colors.white,
-            press: () {}),
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return LoginScreen();
+              }));
+            }),
         RoundedButton(
             title: "SIGN UP",
             btncolor: primaryLightColor,
